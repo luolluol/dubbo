@@ -18,7 +18,7 @@
 	<modelVersion>4.0.0</modelVersion>
     <groupId>com.alibaba</groupId>
 	<artifactId>dubbo-parent</artifactId>
-	<version>2.5.4-SNAPSHOT</version>
+	<version>2.5.4.3-RELEASE</version>
 	<packaging>pom</packaging>
 	<name>${project.artifactId}</name>
 	<description>The parent project of dubbo</description>
@@ -37,7 +37,7 @@
 		<url>http://www.alibaba.com</url>
 	</organization>
 	<modules>
-		<module>hessian-lite</module>
+		<!--<module>hessian-lite</module>-->
 		<module>dubbo-common</module>
 		<module>dubbo-container</module>
 		<module>dubbo-remoting</module>
@@ -477,6 +477,19 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>public</id>
+			<name>public</name>
+			<url>http://nexus.daikuan.corp.qihoo.net:8083/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+		<repository>
+			<id>releases</id>
+			<name>Releases</name>
+			<url>http://nexus.daikuan.corp.qihoo.net:8083/nexus/content/repositories/releases/</url>
+		</repository>
+	</distributionManagement>
 
 	<issueManagement>
 		<system>github</system>
